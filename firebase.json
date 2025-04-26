@@ -1,0 +1,64 @@
+{
+    "flutter": {
+        "platforms": {
+        "android": {
+            "default": {
+            "projectId": "nas-app-service",
+            "appId": "1:174371785389:android:00ef7721c53c22ac781424",
+            "fileOutput": "android/app/google-services.json"
+            }
+        },
+        "ios": {
+            "default": {
+            "projectId": "nas-app-service",
+            "appId": "1:174371785389:ios:ab4af9095a2e9110781424",
+            "uploadDebugSymbols": false,
+            "fileOutput": "ios/Runner/GoogleService-Info.plist"
+            }
+        },
+        "dart": {
+            "lib/firebase_options.dart": {
+            "projectId": "nas-app-service",
+            "configurations": {
+                "android": "1:174371785389:android:00ef7721c53c22ac781424",
+                "ios": "1:174371785389:ios:ab4af9095a2e9110781424",
+                "web": "1:174371785389:web:471f0ca4ba66a21d781424"
+            }
+            }
+        },
+        "macos": {
+            "default": {
+            "projectId": "nas-app-service",
+            "appId": "1:174371785389:ios:ab4af9095a2e9110781424",
+            "uploadDebugSymbols": false,
+            "fileOutput": "macos/Runner/GoogleService-Info.plist"
+            }
+        }
+        }
+    },
+    "hosting": {
+        "public": "build/web",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+            ],
+        "headers": [
+            {
+                "source": "**",
+                "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-store, must-revalidate"
+                }
+                ]
+            }
+        ]
+    }
+}
