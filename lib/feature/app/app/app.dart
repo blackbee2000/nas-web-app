@@ -53,7 +53,16 @@ class _MyAppState extends State<MyApp> {
       getPages: AppPages.pages,
       initialRoute: AppRoutes.splashScreen,
       initialBinding: AppBinding(),
-      builder: EasyLoading.init(),
+      builder: EasyLoading.init(
+        builder: (context, child) {
+          return Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 480),
+              child: child,
+            ),
+          );
+        },
+      ),
     );
   }
 }
